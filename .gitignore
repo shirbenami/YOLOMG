@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+
+# local dataset copies and inference output
+datasets/
+dataset/
+*.mp4
+*.avi
+predictions/
+masks/
+pred*.jpg

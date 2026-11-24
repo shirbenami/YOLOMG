@@ -1,0 +1,19 @@
+# Pinned dependency set for running this 2022-era YOLOv5 fork on Python 3.12, CPU-only.
+# numpy must stay <2: the code predates the NumPy 2 API removals.
+# torch must stay <2.6: torch.load() flipped weights_only to True in 2.6,
+# which rejects the pickled model objects in runs/train/*/weights/*.pt.
+numpy==1.26.4
+torch==2.5.1
+torchvision==0.20.1
+opencv-python-headless==4.10.0.84
+Pillow==10.4.0
+matplotlib==3.8.4
+pandas==2.2.3
+scipy==1.13.1
+seaborn==0.13.2
+PyYAML==6.0.2
+tqdm==4.66.5
+requests==2.32.3
+tensorboard==2.18.0
+thop==0.1.1.post2209072238  # FLOPs counter used by utils/torch_utils.model_info; missing from upstream requirements.txt
+onnx==1.17.0  # optional, for ONNX export. Must be <1.18: newer onnx pulls ml-dtypes, which forces numpy>=2.
